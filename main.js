@@ -35,32 +35,33 @@ function setFontFamilyBasedOnMousePosition(e) {
     // Check if font size has not changed by the buttons
     if (xPos > rect.left && xPos < rect.right && yPos > rect.top * .1 && yPos < rect.bottom) {
       text.style.fontFamily = fontCenter;
-      text.style.marginTop = '40vh';
-      text.style.fontSize = '8vw';
+      text.style.marginTop = '21vh';
+      text.style.fontSize = '10.5vw';
       text.style.marginRight = '0vw';      
     } else if (Math.abs(xPos - textCenterX) > Math.abs(yPos - textCenterY)) {
       text.style.fontFamily = fontLeftRight;
-      text.style.marginTop = '40vh';
+      text.style.marginTop = '21vh';
       text.style.marginRight = '6vw';      
-      text.style.fontSize = '7.5vw';
+      // text.style.fontSize = '9vw';
     } else {
       text.style.fontFamily = fontAboveBelow;
-      text.style.marginTop = '36vh';
-      text.style.fontSize = '7.5vw';
+      text.style.marginTop = '18vh';
+      // text.style.fontSize = '10vw';
+      text.style.marginRight = '0vw';      
     }
   } else {
     if (xPos > rect.left && xPos < rect.right && yPos > rect.top * .2 && yPos < rect.bottom) {
       text.style.fontFamily = fontCenter;
-      text.style.marginTop = '40vh';
+      text.style.marginTop = '21vh';
       text.style.marginLeft = '0';
       text.style.marginRight = '0vw';        
     } else if (Math.abs(xPos - textCenterX) > Math.abs(yPos - textCenterY)) {
       text.style.fontFamily = fontLeftRight;
       text.style.marginRight = '6vw';      
-      text.style.marginTop = '40vh';
+      text.style.marginTop = '21vh';
     } else {
       text.style.fontFamily = fontAboveBelow;
-      text.style.marginTop = '36vh';
+      text.style.marginTop = '18vh';
     }
   }
 }
