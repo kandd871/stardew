@@ -2,18 +2,21 @@
   font-family: 'stardew';
   src: local('stardew'), url('stardewVF.ttf') format('truetype');
   font-style: normal;
+  font-weight: 0;
 }
 
 @font-face {
   font-family: 'stardewstretch';
   src: local('stardewstretch'), url('stardewstretchVF.ttf') format('truetype');
   font-style: normal;
+  font-weight: 0;
 }
 
 @font-face {
   font-family: 'stardewstretch1';
   src: local('stardewstretch1'), url('stardewstretch1VF.ttf') format('truetype');
   font-style: normal;
+  font-weight: 0;
 }
 
 
@@ -152,7 +155,7 @@ button:hover{
 }
 
 #decreaseFontSize{
-  margin-right: .25vw;
+  margin-right: .5vw;
 }
 
 #head{

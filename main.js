@@ -36,17 +36,17 @@ function setFontFamilyBasedOnMousePosition(e) {
     if (xPos > rect.left && xPos < rect.right && yPos > rect.top * .1 && yPos < rect.bottom) {
       text.style.fontFamily = fontCenter;
       text.style.marginTop = '40vh';
-      text.style.fontSize = '9vw';
+      text.style.fontSize = '8vw';
       text.style.marginRight = '0vw';      
     } else if (Math.abs(xPos - textCenterX) > Math.abs(yPos - textCenterY)) {
       text.style.fontFamily = fontLeftRight;
       text.style.marginTop = '40vh';
-      text.style.marginRight = '7vw';      
-      text.style.fontSize = '8vw';
+      text.style.marginRight = '6vw';      
+      text.style.fontSize = '7.5vw';
     } else {
       text.style.fontFamily = fontAboveBelow;
       text.style.marginTop = '36vh';
-      text.style.fontSize = '8vw';
+      text.style.fontSize = '7.5vw';
     }
   } else {
     if (xPos > rect.left && xPos < rect.right && yPos > rect.top * .2 && yPos < rect.bottom) {
@@ -56,7 +56,7 @@ function setFontFamilyBasedOnMousePosition(e) {
       text.style.marginRight = '0vw';        
     } else if (Math.abs(xPos - textCenterX) > Math.abs(yPos - textCenterY)) {
       text.style.fontFamily = fontLeftRight;
-      text.style.marginRight = '7vw';      
+      text.style.marginRight = '6vw';      
       text.style.marginTop = '40vh';
     } else {
       text.style.fontFamily = fontAboveBelow;
