@@ -1,0 +1,196 @@
+@font-face {
+  font-family: 'stardew';
+  src: local('stardew'), url('stardewVF.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'stardewstretch';
+  src: local('stardewstretch'), url('stardewstretchVF.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'stardewstretch1';
+  src: local('stardewstretch1'), url('stardewstretch1VF.ttf') format('truetype');
+  font-style: normal;
+}
+
+
+html{
+     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 36%, rgba(255,255,0,1) 100%);
+     height: 100%;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  font-family: 'stardew', Arial, sans-serif;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: 0; /* Reset margin to remove extra space */
+  background-image: linear-gradient(white, yellow);
+  min-height: 100%;
+  background-size: cover;
+}
+
+/* Other styles remain unchanged */
+.controls{
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  position: fixed;
+  margin: 0 auto;
+  margin-top: 3vh;
+}
+
+.enter{
+  position: relative;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+}
+
+
+#text {
+  font-size: 9vw;
+  transition: .65s;
+  line-height: 1.1;
+  width: 95%;
+  outline: none;
+  font-variation-settings: 'wght' 65;
+  animation: floatAnimation 2s infinite alternate;
+  -webkit-text-stroke-width: 0.5px; /* Adjust stroke width as needed */
+  -webkit-text-stroke-color: black; /* Initial stroke color */
+  margin-top: 40vh;
+}
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 15%;
+  height: 10px;
+  border-radius: 5px;
+  background: white;
+  outline: none;
+  border: 1px solid black;
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background: url('star.png');
+  background-size: contain;
+  cursor: pointer;
+}
+
+/*
+#slider {
+  display: inline-flex;
+  margin: 0 auto;
+  margin-top: 5vh;
+  width: 10%;
+  align-items: center;
+  align-content: center;
+  vertical-align: center;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('star.png');
+  cursor: pointer;
+}
+
+#slider::-moz-range-thumb {
+  width: 23px;
+  height: 25px;
+  border: 0;
+  background: url('star.png');
+  cursor: pointer;
+}*/
+
+
+#head, #stroke{
+  background-color: white;
+  border-radius: .75vw;
+  margin-right: .5vw;
+}
+
+button{
+    background-color: white;
+    border: .5px solid black;
+    transform: scale(1.2);
+    margin: vh;
+    margin-top: 0;
+    font-size: 1.35vh;
+    border-radius: .5vw;
+    padding: .4vw .7vw .4vw .7vw;
+    cursor: pointer;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+}
+
+#decreaseFontSize{
+  margin-right: .25vw;
+}
+
+#head{
+  margin-left:  .75vw;
+  margin-right: .25vw;
+  cursor: pointer;
+}
+
+#stroke{
+  background-color: black;
+  border: .1px solid white;
+  padding: .3vh;
+  cursor: pointer;
+}
+
+.size{
+  margin-left: .75vw;
+  margin-right: .2vw;
+}
+
+@keyframes floatAnimation {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px); /* Adjust the floating distance as needed */
+    }
+  }
+
+  @media only screen and (max-width: 700px){
+    button{
+      padding: 1vw 2vw 1vw 2vw;
+      font-size: 3vh;
+      border-radius:  1vw;
+  }
+  .slider{
+    width: 25%;
+  }
+
+
+

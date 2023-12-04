@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>stardew</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+   <link rel="ICON" href="star.ico" type="image/ico"/>
+</head>
+<body>
+  <div class='controls'>
+  <input type="range" min="0" max="100" value="65" id="slider" class='slider'>
+  <input type="color" id="head" name="head" value="#000000" />
+  <input type="color" id="stroke" name="head" value="#000000" />
+  <div class="size">
+  <button id="decreaseFontSize">-</button>
+  <button id="increaseFontSize">+</button>
+  </div>
+</div>
+  <div class="enter">
+    <p 
+      id="text" 
+      contenteditable="true" 
+      role="textbox" 
+      aria-multiline="true" 
+      aria-label="Editable paragraph"
+    >this is... stardew!<br>
+    type away ͙͘͡★
+  </p>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
