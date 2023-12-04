@@ -65,7 +65,7 @@ body {
   line-height: 1.1;
   width: 95%;
   outline: none;
-  font-variation-settings: 'wght' 65;
+  font-variation-settings: 'wght' 60;
   animation: floatAnimation 2s infinite alternate;
   -webkit-text-stroke-width: 0.5px; /* Adjust stroke width as needed */
   -webkit-text-stroke-color: black; /* Initial stroke color */
