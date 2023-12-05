@@ -42,11 +42,11 @@ function setFontFamilyBasedOnMousePosition(e) {
       text.style.fontFamily = fontLeftRight;
       text.style.marginTop = '21vh';
       text.style.marginRight = '6vw';      
-      // text.style.fontSize = '9vw';
+      text.style.fontSize = '10.25vw';
     } else {
       text.style.fontFamily = fontAboveBelow;
       text.style.marginTop = '18vh';
-      // text.style.fontSize = '10vw';
+      text.style.fontSize = '10.25vw';
       text.style.marginRight = '0vw';      
     }
   } else {
