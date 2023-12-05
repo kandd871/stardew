@@ -46,7 +46,7 @@ function setFontFamilyBasedOnMousePosition(e) {
     } else {
       text.style.fontFamily = fontAboveBelow;
       text.style.marginTop = '18vh';
-      text.style.fontSize = '10.25vw';
+      // text.style.fontSize = '10.25vw';
       text.style.marginRight = '0vw';      
     }
   } else {
