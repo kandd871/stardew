@@ -2,6 +2,8 @@ const text = document.getElementById('text');
 const slider = document.getElementById('slider');
 const colorPicker = document.getElementById('head');
 const colorPicker2 = document.getElementById('stroke');
+const colorPicker3 = document.getElementById('gradient');
+const body = document.querySelector('body');
 
 let currentFontSize = 10; // 10vw as the initial font size
 let fontSizeChanged = false; // Flag to track if font size has been changed
@@ -35,14 +37,13 @@ function setFontFamilyBasedOnMousePosition(e) {
     // Check if font size has not changed by the buttons
     if (xPos > rect.left && xPos < rect.right && yPos > rect.top * .1 && yPos < rect.bottom) {
       text.style.fontFamily = fontCenter;
-      text.style.marginTop = '21vh';
-      text.style.fontSize = '10.5vw';
+      text.style.marginTop = '21.5vh';
+      text.style.fontSize = '10vw';
       text.style.marginRight = '0vw';      
     } else if (Math.abs(xPos - textCenterX) > Math.abs(yPos - textCenterY)) {
       text.style.fontFamily = fontLeftRight;
-      text.style.marginTop = '21vh';
-      text.style.marginRight = '6vw';      
-      text.style.fontSize = '10.25vw';
+      text.style.marginTop = '21.3vh';
+      text.style.marginRight = '5.5vw';      
     } else {
       text.style.fontFamily = fontAboveBelow;
       text.style.marginTop = '18vh';
@@ -86,3 +87,10 @@ colorPicker2.addEventListener("input", watchColorPicker2, false);
 function watchColorPicker2(event) {
   text.style.WebkitTextStrokeColor = event.target.value;
 }
+
+colorPicker3.addEventListener("input", watchColorPicker3, false);
+
+function watchColorPicker3(event) {
+  body.style.background = `linear-gradient(white, ${event.target.value})`;
+}
+
