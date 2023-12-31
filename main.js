@@ -23,58 +23,45 @@ function decreaseFontSize() {
 document.getElementById('increaseFontSize').addEventListener('click', increaseFontSize);
 document.getElementById('decreaseFontSize').addEventListener('click', decreaseFontSize);
 
-function setFontFamilyBasedOnMousePosition(e) {
-  const rect = text.getBoundingClientRect();
-  const textCenterX = rect.left + rect.width / 2;
-  const textCenterY = rect.top + rect.height / 2;
-  const xPos = e.clientX;
-  const yPos = e.clientY;
-  const fontAboveBelow = 'stardewstretch, Arial, sans-serif';
-  const fontLeftRight = 'stardewstretch1, Arial, serif';
-  const fontCenter = 'stardew, Arial, sans-serif'; // Change 'stardew' to your font family
+// function setFontFamilyBasedOnMousePosition(e) {
+//   const rect = text.getBoundingClientRect();
+//   const textCenterX = rect.left + rect.width / 2;
+//   const textCenterY = rect.top + rect.height / 2;
+//   const xPos = e.clientX;
+//   const yPos = e.clientY;
+//   const fontCenter = 'stardew, Arial, sans-serif'; // Change 'stardew' to your font family
 
-  if (!fontSizeChanged) {
-    // Check if font size has not changed by the buttons
-    if (xPos > rect.left && xPos < rect.right && yPos > rect.top * .1 && yPos < rect.bottom) {
-      text.style.fontFamily = fontCenter;
-      text.style.marginTop = '21.5vh';
-      text.style.fontSize = '10vw';
-      text.style.marginRight = '0vw';      
-    } else if (Math.abs(xPos - textCenterX) > Math.abs(yPos - textCenterY)) {
-      text.style.fontFamily = fontLeftRight;
-      text.style.marginTop = '21.3vh';
-      text.style.marginRight = '5.5vw';      
-    } else {
-      text.style.fontFamily = fontAboveBelow;
-      text.style.marginTop = '18vh';
-      // text.style.fontSize = '10.25vw';
-      text.style.marginRight = '0vw';      
-    }
-  } else {
-    if (xPos > rect.left && xPos < rect.right && yPos > rect.top * .2 && yPos < rect.bottom) {
-      text.style.fontFamily = fontCenter;
-      text.style.marginTop = '21vh';
-      text.style.marginLeft = '0';
-      text.style.marginRight = '0vw';        
-    } else if (Math.abs(xPos - textCenterX) > Math.abs(yPos - textCenterY)) {
-      text.style.fontFamily = fontLeftRight;
-      text.style.marginRight = '6vw';      
-      text.style.marginTop = '21vh';
-    } else {
-      text.style.fontFamily = fontAboveBelow;
-      text.style.marginTop = '18vh';
-    }
-  }
-}
+//   if (!fontSizeChanged) {
+//     // Check if font size has not changed by the buttons
+//     if (xPos > rect.left && xPos < rect.right && yPos > rect.top * .1 && yPos < rect.bottom) {
+//       // text.style.marginTop = '21.5vh';
+//       text.style.fontSize = '10vw';
+//       // text.style.marginRight = '0vw';      
+//     } else if (Math.abs(xPos - textCenterX) > Math.abs(yPos - textCenterY)) {
+//       // text.style.marginTop = '21.3vh';
+//       // text.style.marginRight = '5.5vw';      
+//     } else {
+//       // text.style.marginTop = '18vh';
+//       // text.style.fontSize = '10.25vw';
+//       // text.style.marginRight = '0vw';      
+//     }
+//   } else {
+//     if (xPos > rect.left && xPos < rect.right && yPos > rect.top * .2 && yPos < rect.bottom) {
+//       // text.style.marginTop = '21vh';
+//       // text.style.marginLeft = '0';
+//       // text.style.marginRight = '0vw';        
+//     } else if (Math.abs(xPos - textCenterX) > Math.abs(yPos - textCenterY)) {
+//       // text.style.marginRight = '6vw';      
+//       // text.style.marginTop = '21vh';
+//     } else {
+//       // text.style.marginTop = '18vh';
+//     }
+//   }
+// }
 
-slider.addEventListener('input', (e) => {
-  const weight = e.target.value;
-  const fontFamily = text.style.fontFamily; // Get current font family
-  text.style.fontVariationSettings = `'wght' ${weight}`;
-});
 
-// Event listener for mouse movement
-document.addEventListener('mousemove', setFontFamilyBasedOnMousePosition);
+// // Event listener for mouse movement
+// document.addEventListener('mousemove', setFontFamilyBasedOnMousePosition);
 
 colorPicker.addEventListener("input", watchColorPicker, false);
 
