@@ -5,7 +5,7 @@ const colorPicker2 = document.getElementById('stroke');
 const colorPicker3 = document.getElementById('gradient');
 const body = document.querySelector('body');
 
-let currentFontSize = 10; // 10vw as the initial font size
+let currentFontSize = 11.5; // 10vw as the initial font size
 let fontSizeChanged = false; // Flag to track if font size has been changed
 
 function increaseFontSize() {
