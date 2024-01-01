@@ -23,6 +23,9 @@ function decreaseFontSize() {
 document.getElementById('increaseFontSize').addEventListener('click', increaseFontSize);
 document.getElementById('decreaseFontSize').addEventListener('click', decreaseFontSize);
 
+// Set the --stroke-rgb variable with RGB values
+document.documentElement.style.setProperty('--stroke-rgb', hexToRgb(getComputedStyle(document.documentElement).getPropertyValue('--stroke')));
+
 // function setFontFamilyBasedOnMousePosition(e) {
 //   const rect = text.getBoundingClientRect();
 //   const textCenterX = rect.left + rect.width / 2;
@@ -73,11 +76,32 @@ colorPicker2.addEventListener("input", watchColorPicker2, false);
 
 function watchColorPicker2(event) {
   text.style.WebkitTextStrokeColor = event.target.value;
+  document.documentElement.style.setProperty('--stroke', event.target.value);
+  document.documentElement.style.setProperty('--stroke-rgb', hexToRgb(event.target.value));
 }
+
 
 colorPicker3.addEventListener("input", watchColorPicker3, false);
 
 function watchColorPicker3(event) {
   body.style.background = `linear-gradient(white, ${event.target.value})`;
 }
+
+// Function to convert hex color code to RGB
+function hexToRgb(hex) {
+  // Remove the hash sign if it exists
+  hex = hex.replace(/^#/, '');
+
+  // Parse the hexadecimal values for each color component
+  var bigint = parseInt(hex, 16);
+  var r = (bigint >> 16) & 255;
+  var g = (bigint >> 8) & 255;
+  var b = bigint & 255;
+
+  return r + ',' + g + ',' + b;
+}
+
+
+
+
 
