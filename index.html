@@ -7,17 +7,28 @@
    <link rel="ICON" href="star.ico" type="image/ico"/>
 </head>
 <body>
+  <div class="tester">
   <div class='controls'>
-  <input type="range" min="0" max="100" value="40" id="slider" class='slider'>
-  <input type="color" id="head" name="head" value="#000000" />
-  <input type="color" id="stroke" name="head" value="#000000" />
-  <input type="color" id="gradient" name="head" value="#FFFF00"/>
+    <div id="tester-header">
+      <span class="heading">TRY ME!</span>
+    </div>
+  <div class="inputs">
+  <input type="range" min="0" max="100" value="50" id="slider" class='slider'>
+  <input type="color" id="head" name="head" value="#1C1C1C" />
+  <input type="color" id="stroke" name="head" value="#1C1C1C" />
   <div class="size">
   <button id="decreaseFontSize">-</button>
+  <span id="fontsize">240px</span>
   <button id="increaseFontSize">+</button>
   </div>
+  </div>
+  <input type="color" id="gradient" name="head" value="#FF42BA"/>
 </div>
   <div class="enter">
+    <div class="meters">
+    <span id="weightmeter" class="arial">WEIGHT: 50</span><br>
+    <span id="widthmeter" class="arial">WIDTH: 50</span>
+  </div>
     <p 
       id="text" 
       contenteditable="true" 
@@ -25,9 +36,78 @@
       aria-multiline="true" 
       aria-label="Editable paragraph"
       spellcheck="false"
+      class="placeholder"
     >this is... <Br>stardew!<br>
-    type away ͙͘͡★
+    type away.
   </p>
+  </div>
+  </div>
+  <div class="about">
+    <div id="about-header">
+      <span class="heading">ABOUT</span><div id="mode"><button id="mode-button">● DARK MODE</button></div>
+    </div>
+    <div class="info">
+      <div class="symbols">
+        <span class="symbol" id="symbol4">.</span><span class="symbol" id="symbol5">.</span><span class="symbol" id="symbol6">.</span>
+        <span class="symbol" id="symbol1">.</span><span class="symbol" id="symbol2">.</span><span class="symbol" id="symbol3">.</span>
+      </div>
+      <div class="information">
+        <div class="subheadings" id="info-header"><span class="subheader">INFOS</span></div>
+        <p class="arial">stardew is a
+        pixel-based,
+        grid-based,
+        <span>variable</span>  display serif designed by <span class="uppercase">Drithi Kandoor</span>.
+        </p>
+        <p id="intro-text" class="arial">
+          The typeface was born from a curiosity about combining traditional design with technology, aiming to create an interplay between pixel and serif typography. Interested in how a grid and symbol could reimagine the nature of serifs, Stardew uses a flower-like pixel (<span class="pixel font"><img src="star1.png"></span>) to form its characters. The placement and varying repetition of this symbol on a grid reinforce the stress of serif typefaces. A different variation of the pixel (<span class="pixel font"><img src="star.png"></span>) is used for the serifs, dots, and other aspects, creating a playful distinction. The serifs are also tapered, and the letters have a slightly tilted axis, resembling old-style serifs.
+        </p>
+        <p class="arialsub">it comes with different<br> <span id="weight" class="font">weights</span>,<br> as well as different<br> <span id="width" class="font">widths</span>.</p>
+    </div><br>
+    <div class="process">
+      <div class="subheadings" id="process-header"><span class="subheader">PROCESS</span></div>
+      <p class="arial">
+        After multiple rounds of hand-sketching possible symbols, grids, and serif characters... 
+      </p>
+    <div class="imgs">
+      <img src = "process1.PNG">
+      <img src = "process2.PNG">
+      <img src = "process3.PNG">
+    </div>
+    <p class="arial">
+      the characters were brought to life using <span class="uppercase">Glyphs!</span>
+    </p>
+    <div class="imgs">
+      <img src = "glyph1.PNG">
+      <img src = "glyph2.PNG">
+      <img src = "glyph3.PNG">
+    </div>
+    <p class="arial">
+      then, the extremes of width & weight were made to turn stardew into a variable typeface.
+    </p>
+    <div class="imgsvar">
+      <img src = "var1.PNG">
+      <img src = "var2.PNG">
+      <img src = "var3.PNG">
+      <img src = "var4.PNG">
+    </div>
+    </div><br>
+  <div class="characters">
+      <div class="subheadings" id="characters-header"><span class="subheader">CHARACTERS</span></div>
+      <p class="arial">
+        *still in progress – more to come.
+      </p>
+      <div class="chars">
+      <span>a</span> <span>b</span> <span>c</span> <span>d</span> <span>e</span> <span>f</span> <span>g</span>
+      <span>h</span> <span>i</span> <span>j</span> <span>k</span> <span>l</span> <span>m</span> <span>n</span>
+      <span>o</span> <span>p</span> <span>q</span> <span>r</span> <span>s</span> <span>t</span> <span>u</span>
+      <span>v</span> <span>w</span> <span>x</span> <span>y</span> <span>z</span> 
+      <span>.</span> <span>!</span> <span>?</span> <span>,</span> <span>;</span> <span>:</span> <span>/</span>
+      <span>'</span><span>"</span><span>-</span> <span>–</span> 
+    </div>
+    <br><br>
+  </div>
+  <p class="arial"> <span class="font end">............................. </span><br><Br>
+    for more information, contact <span class="email">drithi.rajesh@gmail.com</span></p>
   </div>
   <script src="main.js"></script>
   <script src="main1.js"></script>
