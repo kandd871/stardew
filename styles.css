@@ -12,7 +12,9 @@
 
 :root {
   --stroke: #000000; /* Your base color */
-  --background: #FF42BA;
+  /* --background: #FF42BA; */
+  --background: #42FFFC;
+  
 }
 
 
@@ -178,6 +180,7 @@ input{
 .meters{
   position: fixed;
   z-index: 200;
+  font-size: 1vw!important;
 }
 
 .meters span{
@@ -186,14 +189,12 @@ input{
 }
 
 #weightmeter{
-  font-size: 1vw!important;
   padding-left: 1vh;
   padding-right: 1vh;
   text-transform: uppercase!important;
 }
 
 #widthmeter{
-  font-size: 1vw!important;
   padding-left: 1vh;
   padding-right: 1vh;
   text-transform: uppercase!important;
@@ -348,6 +349,18 @@ button:hover{
   font-size: .95vw;
   position: relative;
   text-transform: uppercase;
+}
+
+.subheadings::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-bottom: 1px dotted black;
+  width: 100%;
+  z-index: -1; /* Ensures the border appears behind the text */
 }
 
 .subheader{
@@ -513,6 +526,8 @@ button:hover{
 .end{
   font-size: 5.5vw;
   padding-bottom: 2vh;
+  -webkit-text-stroke: 1px #1C1C1C;
+  color:white;
 }
 
 
@@ -581,14 +596,39 @@ button:hover{
   }
 }
 
-
-  @media only screen and (max-width: 700px){
-    button{
-      padding: .95vw 2vw .95vw 2vw;
-      font-size: 3vh;
-      border-radius:  .95vw;
+@media only screen and (max-width: 1300px){
+  .arial, .arialsub, .subheadings, .heading, .meters{
+    font-size: 1.9vh;
   }
-  .slider{
-    width: 25%;
+
+  #mode-button{
+    font-size: 1.6vh;
+  }
+
+  .symbols{
+    margin-top: -15vh;
+  }
+
+}
+
+@media only screen and (max-width: 700px){
+  .symbols{
+    margin-top: -10vh;
+    margin-bottom: 3vh;
+  }
+
+  #head, #stroke{
+    /* background-color: white; */
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vh;
+  }
+
+  #head{
+    margin-right:-1vw;
+  }
+
+  .controls button{
+    transform: scale(1.7)
   }
 }
