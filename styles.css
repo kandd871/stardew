@@ -530,6 +530,11 @@ button:hover{
   color:white;
 }
 
+.mockimgs > img{
+  width: 97%;
+  margin: 1vh;
+  border: 1.5px dotted black;
+}
 
 
 @keyframes stroke{
