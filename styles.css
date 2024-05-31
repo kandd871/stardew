@@ -33,7 +33,7 @@ body {
   transition: .65s;
   position: relative;
   cursor:  auto;
-  cursor: url('cursor.png') 10 10, auto;
+  cursor: url('cursor2.svg') 10 10, auto;
   opacity: 0;
   animation: start 1s ease-out forwards;
   text-decoration: none;

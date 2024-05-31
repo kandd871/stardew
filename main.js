@@ -126,7 +126,7 @@ mode.addEventListener("click", function(){
 
   if (modeButton.textContent === "● DARK MODE") {
     modeButton.textContent = "● LIGHT MODE";
-    body.style.cursor = `url('cursor2.png') 10 10, auto`;
+    body.style.cursor = `url('cursor2.svg') 10 10, auto`;
     introtext.innerHTML = '';
     introtext.innerHTML = `
     <p id="intro-text" class="arial">
