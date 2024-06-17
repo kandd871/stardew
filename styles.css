@@ -40,6 +40,11 @@ body {
   display: flex;
 }
 
+#drithi{
+  color:#000000;
+  text-decoration: underline dotted;
+}
+
 input[type="color"] {
   appearance: none;
   -moz-appearance: none;
